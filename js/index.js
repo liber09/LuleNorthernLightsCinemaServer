@@ -31,6 +31,11 @@ app.get("/news", (req,res) => {
     res.render('news')
 });
 
+//Gift card
+app.get("/gift-card", (req,res) => {
+    res.render('giftcard')
+});
+
 app.use('/static',express.static('./static'));
 
 app.listen(5080);
