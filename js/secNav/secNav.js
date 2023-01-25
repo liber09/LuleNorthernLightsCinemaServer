@@ -61,3 +61,5 @@ window.onclick = function (event) {
     document.querySelector("#barBist-dropdown").classList.remove("show");
   }
 };
+
+module.exports = secNav;
