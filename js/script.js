@@ -1,3 +1,4 @@
+import { loadMovies } from './movies';
 function hamburger() {
   let hamburgerIcon = document.querySelector("#hamburger-icon");
   let mainNavShow = document.querySelector(".main-nav");
@@ -20,7 +21,7 @@ async function displayCards() {
   let res = await fetch("src/movies.json");
   let data = await res.json();
 
-  listItem = data.movies;
+  listItem = loadMovies();
 
   listItem.forEach(function (movieAll) {
     let img = document.createElement("img");
