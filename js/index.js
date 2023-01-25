@@ -16,6 +16,11 @@ app.get("/openingHours", (req,res) => {
     res.render('openingHoursAndContact')
 });
 
+//About us
+app.get("/about", (req,res) => {
+    res.render('about')
+});
+
 app.use('/static',express.static('./static'));
 
 app.listen(5080);
