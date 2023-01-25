@@ -26,6 +26,11 @@ app.get("/tickets", (req,res) => {
     res.render('tickets')
 });
 
+//News
+app.get("/news", (req,res) => {
+    res.render('news')
+});
+
 app.use('/static',express.static('./static'));
 
 app.listen(5080);
