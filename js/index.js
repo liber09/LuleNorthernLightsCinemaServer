@@ -12,9 +12,19 @@ app.set('view engine', 'ejs')
 //Index page
 app.get("/", async (req,res) => {
     movies = await loadMovies();
-    res.render('index')
+    res.render('index', {movies})
     console.log(movies);
 });
+
+//Get specific movie
+app.get("/movies/:movieId", async (req, res) => {
+    const movie = await loadMovie(req.params.movieId);
+    if (movie) {
+      res.render("movie", { movie });
+    } else {
+      res.status(404).render("404");
+    }
+  });
 
 //Opening hours and contact
 app.get("/openingHours", (req,res) => {
