@@ -2,7 +2,7 @@
   "name": "lulenorthernlightscinema",
   "version": "1.0.0",
   "description": "Biograf i Luleå",
-  "main": "./js/index.js",
+  "main": "index.js",
   "scripts": {
     "sass": "sass --no-source-map src/main.scss static/main.css",
     "watch": "sass --no-source-map --watch src/main.scss static/main.css",
