@@ -22,3 +22,14 @@ test('Shawshank page returns Shawshank info', async () => {
   expect(response.text.includes('Shawshank')).toBeTruthy();  //Expected to be in response
   expect(response.text.includes('dogs')).toBeFalsy();  //Expected not to be in response
 });
+
+//Define test name
+test('movie not found', async () => {
+    const response = await request(app) //Send request
+      .get('/movies/99')  //To what path
+      .expect('Content-Type', 'text/html; charset=utf-8')  //Expected return type
+      .expect(404);
+  
+    expect(response.text.includes("We have been")).toBeTruthy();  //Expected to be in response
+    expect(response.text.includes('Shawshank')).toBeFalsy();  //Expected not to be in response
+  });
