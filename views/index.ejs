@@ -3,23 +3,19 @@
 <head>
   <%- include('./partials/head'); %>
 </head>
-<body>
-  <main class = "container">
-    <ul>
-      <% movies.map((movie) =>{ %>
-        <li class="">
-          <%= movie.attributes.title %>
-          <%= movie.attributes.intro %>
-        </li>
-      <% }) %>
-    </ul>
-  </main>
 <header>
   <%- include('./partials/header'); %>
 </header>
-  <%- include('./partials/secNav'); %>
-<main>
-  
+<%- include('./partials/secNav'); %>
+<main class = "picture-container">
+  <ul>
+    <% movies.map((movie) =>{ %>
+    <li class="cards">
+      <p class="movie-title"><%= movie.attributes.title %></p>
+      <img src=<%=movie.attributes.image.url %> alt="">
+    </li>
+    <% }) %>
+  </ul>
 </main>
 
 <footer>
