@@ -10,10 +10,13 @@
 <main class = "picture-container">
   <ul>
     <% movies.map((movie) =>{ %>
-    <li class="cards">
-      <p class="movie-title"><%= movie.attributes.title %></p>
-      <img src=<%=movie.attributes.image.url %> alt="">
-    </li>
+    <a href="/movies/<%= movie.id %>">
+      <li class="cards">
+        <p class="movie-title"><%= movie.attributes.title %></p>
+        <img src=<%=movie.attributes.image.url %> alt=<%= movie.attributes.title %>>                                                             
+      </li>
+    </a>  
+    
     <% }) %>
   </ul>
 </main>
