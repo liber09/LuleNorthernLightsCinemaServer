@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <%- include('./partials/head'); %>
+</head>
+<header>
+  <%- include('./partials/header'); %>
+</header>
+<%- include('./partials/secNav'); %>
+<article class = "movie">
+  <ul>
+      <li class="movieCard">
+        <p class="movie-title"><%= movie.attributes.title %></p>
+        <p class=""><%= movie.attributes.intro %></p>
+        <img src=<%=movie.attributes.image.url %> alt=<%= movie.attributes.title %>>                                                             
+      </li>
+  </ul>
+</article>
+
+<footer>
+  <%- include('./partials/footer'); %>
+</footer>
+</body>
+</html>

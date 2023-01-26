@@ -385,12 +385,6 @@ main section img {
   gap: 70px;
   margin: 50px 0;
 }
-@media screen and (max-width: 415px) {
-  .picture-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
-}
 .picture-container .cards {
   background-color: white;
   display: flex;
@@ -425,6 +419,48 @@ main section img {
   color: black;
 }
 .picture-container .cards .movie-title a:visited {
+  color: black;
+}
+
+.movies {
+  display: flex;
+  gap: 70px;
+  margin: 50px 0;
+}
+.movies .movieCard {
+  background-color: white;
+  display: flex;
+  width: 35em;
+  flex-direction: column;
+  margin: 20px;
+  list-style: none;
+  box-shadow: 0 0.2em 0.3em black;
+  border-radius: 0.5em;
+  justify-content: center;
+  align-items: center;
+}
+.movies .movieCard:hover {
+  transform: scale(1.02);
+}
+.movies .movieCard img {
+  width: 10em;
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center;
+  align-self: center;
+  margin: 0px 0 25px;
+}
+.movies .movieCard .movie-title {
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+  margin: 25px;
+}
+.movies .movieCard .movie-title a {
+  text-decoration: none;
+  color: black;
+}
+.movies .movieCard .movie-title a:visited {
   color: black;
 }
 
