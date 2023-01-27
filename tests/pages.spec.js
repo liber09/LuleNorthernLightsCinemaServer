@@ -53,7 +53,7 @@ test('Isle of dogs page returns Isle of dogs info', async () => {
 });
 
 //Define test name
-test('Isle of dogs page returns Isle of dogs info', async () => {
+test('My neighbor Totoro page returns My neighbor Totoro info', async () => {
   const response = await request(app) //Send request
     .get('/movies/4')  //To what path
     .expect('Content-Type', 'text/html; charset=utf-8')  //Expected return type
