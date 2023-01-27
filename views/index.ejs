@@ -6,14 +6,14 @@
 <header>
   <%- include('./partials/header'); %>
 </header>
-<%- include('./partials/secNav'); %>
-<main class = "picture-container">
-  <ul>
+
+<main>
+  <ul class = "picture-container">
     <% movies.map((movie) =>{ %>
     <a href="/movies/<%= movie.id %>">
       <li class="cards">
         <p class="movie-title"><%= movie.attributes.title %></p>
-        <img src=<%=movie.attributes.image.url %> alt=<%= movie.attributes.title %>>                                                             
+        <img src=<%=movie.attributes.image.url %> alt="<%= movie.attributes.title %> poster"                                                             
       </li>
     </a>  
     

@@ -8,12 +8,14 @@
 <header>
   <%- include('./partials/header'); %>
 </header>
-  <%- include('./partials/secNav'); %>
-  <body class = "movie">
+  <body>
     <%- include('./partials/secNav'); %>
-    <ul>
+    <h1 class="moviePage-title">
+      <%= movie.attributes.title %>
+    </h1>
+    <ul class="movie">
       <li class="movieCard">
-        <p class="movie-intro"><%= movie.attributes.intro %></p>
+        <span class="intro-text"><%- movie.attributes.intro %></span>
         <img src=<%=movie.attributes.image.url %> alt=<%= movie.attributes.title %>>                                                             
       </li>
     </ul>

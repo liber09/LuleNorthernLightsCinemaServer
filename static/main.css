@@ -388,9 +388,8 @@ main section img {
 .picture-container .cards {
   background-color: white;
   display: flex;
-  width: 18em;
+  width: 20em;
   flex-direction: column;
-  margin: 20px;
   list-style: none;
   box-shadow: 0 0.2em 0.3em black;
   border-radius: 0.5em;
@@ -402,32 +401,25 @@ main section img {
 }
 .picture-container .cards img {
   width: 10em;
-  margin-left: auto;
-  margin-right: auto;
-  justify-self: center;
-  align-self: center;
-  margin: 0px 0 25px;
 }
 .picture-container .cards .movie-title {
   font-size: 40px;
   font-weight: 800;
   text-align: center;
-  margin: 25px;
+  margin: 0 0 25px 0;
 }
-.picture-container .cards .movie-title a {
+.picture-container .cards a {
   text-decoration: none;
   color: black;
 }
-.picture-container .cards .movie-title a:visited {
-  color: black;
+
+.movie {
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
 
-.movies {
-  display: flex;
-  gap: 70px;
-  margin: 50px 0;
-}
-.movies .movieCard {
+.movieCard {
   background-color: white;
   display: flex;
   width: 35em;
@@ -438,101 +430,28 @@ main section img {
   border-radius: 0.5em;
   justify-content: center;
   align-items: center;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
 }
-.movies .movieCard:hover {
-  transform: scale(1.02);
-}
-.movies .movieCard img {
-  width: 10em;
+.movieCard img {
+  width: 20em;
   margin-left: auto;
   margin-right: auto;
   justify-self: center;
   align-self: center;
-  margin: 0px 0 25px;
-}
-.movies .movieCard .movie-title {
-  font-size: 40px;
-  font-weight: 800;
-  text-align: center;
-  margin: 25px;
-}
-.movies .movieCard .movie-title a {
-  text-decoration: none;
-  color: black;
-}
-.movies .movieCard .movie-title a:visited {
-  color: black;
+  margin: 25px 0 25px;
 }
 
-.modal-container {
-  display: block;
-  position: fixed;
-  background-color: white;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.modal-container.show {
-  display: block;
-}
-.modal-container .cinema-modal {
-  overflow: hidden;
+.moviePage-title {
+  font-size: 10em;
+  font-weight: 800;
   text-align: center;
-  position: relative;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  border-radius: 5px;
-  background-color: white;
-  width: 90%;
-  max-width: 700px;
-  height: auto;
-  margin: 20vh auto;
-  animation: fadeInModal 0.6s;
-  padding-bottom: 40px;
+  margin: 20px;
 }
-.modal-container .cinema-modal .cards-modal {
-  width: 100%;
-  min-height: 400px;
-  flex-direction: row;
-}
-.modal-container .cinema-modal .text-container {
-  font-size: 20px;
-  margin: 10px;
-}
-.modal-container .cinema-modal .book-movie {
-  font-size: 20px;
-  width: 200px;
-  height: 60px;
-  margin-top: 40px;
-  border-radius: 5px;
-  border: none;
-  background-color: #112d4e;
-  color: #dbe2ef;
-  transition: 0.2s;
-}
-.modal-container .cinema-modal .book-movie:hover {
-  transform: scale(1.02);
-}
-.modal-container .cinema-modal .book-movie:active {
-  transform: scale(0.99);
-}
-.modal-container .cinema-modal .close {
-  font-size: 20px;
-  width: 200px;
-  height: 60px;
-  margin-top: 40px;
-  border-radius: 5px;
-  border: none;
-  background-color: rgb(204, 40, 40);
-  color: #dbe2ef;
-  transition: 0.2s;
-}
-.modal-container .cinema-modal .close:hover {
-  transform: scale(1.02);
-}
-.modal-container .cinema-modal .close:active {
-  transform: scale(0.99);
+
+.intro-text {
+  margin: 15px;
 }
 
 .bookingContent {

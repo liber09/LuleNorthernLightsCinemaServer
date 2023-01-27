@@ -32,4 +32,7 @@ test('movie not found', async () => {
   
     expect(response.text.includes("We have been")).toBeTruthy();  //Expected to be in response
     expect(response.text.includes('Shawshank')).toBeFalsy();  //Expected not to be in response
+    expect(response.text.includes('dogs')).toBeFalsy();  //Expected not to be in response
+    expect(response.text.includes('Encanto')).toBeFalsy();  //Expected not to be in response
+    expect(response.text.includes('Totoro')).toBeFalsy();  //Expected not to be in response
   });
